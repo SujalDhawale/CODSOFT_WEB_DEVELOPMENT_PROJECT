@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinix Styled Landing Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; color: #333; line-height: 1.6; }
+
+        header { background: black; color: white; padding: 10px 40px; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 2rem; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav ul li a:hover { color: orange; }
+
+        .slideshow { position: relative; height: 90vh; overflow: hidden; }
+        .slideshow img { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
+        .slideshow img.active { opacity: 1; }
+
+        .products { padding: 40px 20px; text-align: center; background: #f9f9f9; }
+        .products h2 { margin-bottom: 20px; font-size: 2.5rem; }
+
+        /* Product Item Styling */
+        .product-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .product-item:hover { transform: translateY(-10px); box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); }
+
+        .product-info { padding: 20px; width: 60%; text-align: left; opacity: 0; transform: translateY(30px); transition: opacity 1s, transform 1s; }
+        .product-item:hover .product-info { opacity: 1; transform: translateY(0); }
+
+        .product-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+        .product-info p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        .product-info:hover h3 { transform: scale(1.05); }
+        .product-info:hover p { transform: scale(1.02); }
+
+        .product-item.reverse { flex-direction: row-reverse; }
+
+        footer { background: black; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+        footer a { color: orange; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        .footer-links { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px 0; }
+        .footer-column { margin: 20px; max-width: 200px; }
+        .footer-column h4 { margin-bottom: 10px; font-size: 1.2rem; color: orange; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 8px; }
+        .footer-column ul li a { color: white; text-decoration: none; }
+        .footer-column ul li a:hover { text-decoration: underline; }
+
+        .footer-contact { text-align: center; margin-top: 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Sujal Electronics</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow" id="home">
+        <img src="C:\Users\sujal\Downloads\CODESOFT INTERNSHIP\web development\landing page\HeroBannergalaxy-s24-ultra.jpg" alt="Hero Banner" class="active">
+        <img src="C:\Users\sujal\Downloads\CODESOFT INTERNSHIP\web development\landing page\galaxy-tab-s9-kv-pc.jpg" alt="Galaxy Tab S9 Banner">
+        <img src="C:\Users\sujal\Downloads\CODESOFT INTERNSHIP\web development\landing page\b3.jpg" alt="Laptop Banner">
+    </section>
+
+    <!-- Product Section -->
+    <section class="products" id="products">
+        <h2>Our Products</h2>
+
+        <div class="product-item">
+            <img src="C:\Users\sujal\Downloads\CODESOFT INTERNSHIP\web development\landing page\Infinix India - Best Smartphones _ Cutting-Edge Tech_files\SM-S921BZYC-S24-AMBER-YELLOW-8GB256GB-1.png" alt="Galaxy S24">
+            <div class="product-info">
+                <h3>Galaxy S24</h3>
+                <p>Experience the next-level innovation.</p>
+                <p class="details">The Galaxy S24 combines power, speed, and elegance with cutting-edge AI features and a stunning AMOLED display, providing you with an unrivaled smartphone experience. With advanced performance, intuitive design, and seamless connectivity, it’s built to elevate your lifestyle.</p>
+            </div>
+        </div>
+
+        <div class="product-item reverse">
+            <img src="C:\Users\sujal\Downloads\CODESOFT INTERNSHIP\web development\landing page\product2S(tab.avif" alt="Galaxy Tab S9">
+            <div class="product-info">
+                <h3>Galaxy Tab S9</h3>
+                <p>Powerful and portable productivity.</p>
+                <p class="details">Unlock endless possibilities with the Galaxy Tab S9. Featuring a sleek AMOLED screen, multi-window support, and all-day battery life, it’s the perfect blend of productivity and portability. Whether you’re working, streaming, or playing, the Galaxy Tab S9 adapts to your needs.</p>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="C:\Users\sujal\Downloads\samsung-laptops-18-05-2022-006-271515077-wj68a0kz.png"
+alt="Infinix Laptop">
+            <div class="product-info">
+                <h3>Infinix Laptop</h3>
+                <p>Sleek design with cutting-edge performance.</p>
+                <p class="details">The Infinix Laptop is crafted to perfection with a stunning display, high performance, and ultra-light design. Perfect for professionals, creators, and gamers alike, it balances power with portability, ensuring you stay productive and entertained wherever you go.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>PRODUCTS</h4>
+                <ul>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">TV</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>CARE</h4>
+                <ul>
+                    <li><a href="#">Repair Center</a></li>
+                    <li><a href="#">Limited Warranty</a></li>
+                    <li><a href="#">Terms of Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SERVICE</h4>
+                <ul>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">XOS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <p>For any customer support please contact Carl Care between 10 am to 6 pm on all days.</p>
+            <p><strong>18004190525</strong></p>
+            <p>Infinix © 2024 All rights reserved</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            <p>Location: India (EN)</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slideshow img');
+        const totalSlides = slides.length;
+
+        function changeSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(changeSlide, 3000);
+    </script>
+</body>
+</html>
